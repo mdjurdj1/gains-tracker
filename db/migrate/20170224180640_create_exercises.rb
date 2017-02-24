@@ -3,6 +3,7 @@ class CreateExercises < ActiveRecord::Migration[5.0]
     create_table :exercises do |t|
       t.string :name
       t.integer :reps
-    end 
+      t.integer :sets
+    end
   end
 end
