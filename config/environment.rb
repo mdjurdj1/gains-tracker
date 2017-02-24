@@ -1,4 +1,4 @@
-ENV['SINATRA_ENV'] ||= "development" #specifies a development environment for sinatra
+ENV['SINATRA_ENV'] ||= "development" #specifies a "development" label for sinatra environment 
 
 
 require 'bundler/setup'
