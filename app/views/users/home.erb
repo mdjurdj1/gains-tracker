@@ -1,0 +1,7 @@
+<h1>Welcome <%= @user.username %>!</h1>
+
+
+<h2>Workout Journal----------------------------------</h2>
+<% @user.workouts.each do |workout| %>
+ <h3><ul>Workout Date: <%=workout.date%></ul></h3>
+ <%end%>
