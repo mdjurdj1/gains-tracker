@@ -4,3 +4,6 @@ require_relative './config/environment'
 require 'sinatra/activerecord/rake'
 
 #Rake -T will show me all my tasks now that I have a rakefile!
+task :console do
+  Pry.start
+end
