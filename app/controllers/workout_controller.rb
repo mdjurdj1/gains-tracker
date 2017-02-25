@@ -21,13 +21,19 @@ class WorkoutController < ApplicationController
   end 
 
   patch '/workouts/:id' do 
-    @workout = Workout.find(params[:id])
-    last_date = @workout.date
-    last_notes = @workout.notes
-    @workout.update(params[:workout])
-    @workout.update(date: last_date) if params[:workout][:date].empty?
-    @workout.update(notes: last_notes) if params[:workout][:notes].empty?
-    redirect "/workouts/#{@workout.id}"
+    if logged_in?
+      @workout = Workout.find(params[:id])
+      last_date = @workout.date
+      last_notes = @workout.notes
+      last_name = @workout.name
+      @workout.update(params[:workout])
+      @workout.update(date: last_date) if params[:workout][:date].empty?
+      @workout.update(date: last_name) if params[:workout][:date].empty?
+      @workout.update(notes: last_notes) if params[:workout][:notes].empty?
+      redirect "/workouts/#{@workout.id}"
+    else 
+      redirect '/login'
+    end 
   end 
     
 

@@ -1,3 +1,25 @@
-div {
-  color: solid green ;
+div#first {
+    width: 330px;
+    height: 600px;
+    border: 15px solid; color:#034876;
+    padding: 25px;
+    padding-right: 40px;
+    margin: 10px;
+    margin-right: 25px;
+    float:left;
+}
+
+div#second {
+    width: 360px;
+    height: 600px;
+    border: 15px solid; color:#034876;
+    padding: 25px;
+    margin: 10px;
+    margin-right: 25px;
+    float:left;
+}
+
+div#arrow {
+  line-height: 48em;
+  float:left;
 }
