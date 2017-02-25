@@ -1,1 +1,19 @@
 <h1>Workout Date: <%=@workout.date%></h1>
+
+<h3>Notes: <%=@workout.notes%></h3>
+
+<table border="3" cellpadding="5" style="width:30%">
+  <tr>
+    <th>Exercise</th>
+    <th>Sets</th>
+    <th>Reps</th> 
+  </tr>
+<% @workout.workout_exercises.each do |exercise| %>
+  <tr>
+    <td align="center"><%= Exercise.find(exercise.exercise_id).name%></td>
+    <td align="center"><%= exercise.sets%></td>
+    <td align="center"><%= exercise.reps%></td> 
+  </tr>
+  <tr>
+  <%end%>
+</table>
