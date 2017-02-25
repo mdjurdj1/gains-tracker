@@ -10,10 +10,12 @@
   </tr>
 <% @workout.workout_exercises.each do |exercise| %>
   <tr>
-    <td align="center"><%= Exercise.find(exercise.exercise_id).name%></td>
+    <td align="center"><strong><%= Exercise.find(exercise.exercise_id).name%></strong></td>
     <td align="center"><%= exercise.sets%></td>
     <td align="center"><%= exercise.reps%></td> 
   </tr>
   <tr>
   <%end%>
-</table>
+</table><br>
+
+<a href="/workouts/<%=@workout.id%>/edit">Click here to Edit this workout.</a>

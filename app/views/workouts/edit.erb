@@ -1,0 +1,31 @@
+<h1>Workout Date: <%=@workout.date%></h1>
+
+<h3>Notes: <%=@workout.notes%></h3>
+
+<table border="3" cellpadding="5" style="width:30%">
+  <tr>
+    <th>Exercise</th>
+    <th>Sets</th>
+    <th>Reps</th> 
+  </tr>
+<% @workout.workout_exercises.each do |exercise| %>
+  <tr>
+    <td align="center"><strong><%= Exercise.find(exercise.exercise_id).name%></strong></td>
+    <td align="center"><%= exercise.sets%></td>
+    <td align="center"><%= exercise.reps%></td> 
+  </tr>
+  <tr>
+  <%end%>
+</table><br>
+____________________________________________________________________________<br></br>
+
+<form method="POST" action="/workouts/<%=@workout.id%>">
+<input id="hidden" type="hidden" name="_method" value="patch">
+<h2>Workout Date: <input type="text" name="date" placeholder="YYYY-MM-DD"></h2>
+<h2>Notes:</h2><ul><textarea name="notes" placeholder="Edit Notes..."></textarea></ul>
+<h2>Add/Remove Exercises:</h2>
+<%Exercise.all.each do |exercise|%>
+  <input type="checkbox" name="exercises[]" id="<%=exercise.name%>" value="<%=exercise.id%>" <%='checked' if @workout.exercises.include?(exercise) %>><%=exercise.name%></input>
+  <%end%><br></br>
+<input type="submit" name="Edit" value="Edit">
+</form>
