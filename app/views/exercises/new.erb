@@ -1,8 +1,8 @@
-<h1>Welcome, <%=@user.username%> - Let's save a new exercise!</h1>
+<h1>Welcome, <%=current_user.username%> - Let's save a new exercise!</h1>
 
-<div id="second"><form method="POST" action="/exercises">
+<div class="small_box"><form method="POST" action="/exercises">
 <font size="+2">Exercise Name: </font> <input type="text" name="exercise[name]" placeholder="Standing Lunges"><br></br>
 <font size="+2">Exercise Bodypart: </font> <input type="text" name="exercise[bodypart]" placeholder="Legs"><br></br>
-<input id="add_exercise" type="submit" name="Save Exercise" value="Save Exercise"></input></a>
+<input id="add_exercise" type="submit" name="Save Exercise" value="Save Exercise"></input>
 </form>
 </div>

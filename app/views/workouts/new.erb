@@ -6,7 +6,7 @@
 <font size="+2">Notes:</font><ul><textarea name="workout[notes]" rows="5" cols="40" placeholder="Edit Notes..."></textarea></ul>
 <font size="+2">Add/Remove Exercises:</font><br></br>
 <%Exercise.all.each do |exercise|%>
-  <input type="checkbox" name="workout[exercise_ids][]" value="<%=exercise.id%>"><%=exercise.name%><br></input>
+  <input type="checkbox" name="workout[exercise_ids][]" value="<%=exercise.id%>"><small><%=exercise.name%></small><br></input>
   <%end%><br></br>
 <input id="add_workout" type="submit" name="Add Workout" value="Add Workout"></input></a>
 </form>
