@@ -2,15 +2,15 @@
 
 <h2>Exercise Repository----------------------------------</h2>
 
-<div id="first"><table border="3" cellpadding="5" style="width:20em">
+<table border="3" cellpadding="5" style="width:20em">
   <tr>
     <th>Exercise Name</th>
     <th>Bodypart</th>
   </tr>
 <% Exercise.all.each do |exercise| %>
   <tr>
-    <td align="center"><%= Exercise.find(exercise.exercise_id).name%></td>
-    <td align="center"><%= Exercise.find(exercise.exercise_id).bodypart%></td>
+    <td align="center"><%= exercise.name%></td>
+    <td align="center"><%= exercise.bodypart%></td>
   </tr>
   <tr>
   <%end%>

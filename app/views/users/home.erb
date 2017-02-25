@@ -1,9 +1,7 @@
 <h1>Welcome <%= @user.username %>!</h1>
 <% if flash.has?(:message) %>
   <font size="+2"><%= flash[:message] %></font>
-<% end %><br></br>
-
-<strong>_____________________________________________________</strong><br></br><br>
+<% end %><br>
 
 <a href="/workouts/new">Click Here to Add a New Workout!</a><br></br>
 
