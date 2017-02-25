@@ -1,8 +1,5 @@
 <h2><div class="boxed">Edit Workout: <%=@workout.date%></div></h2>
 
-<font size="+2">Notes:</font> 
-<ul><%=@workout.notes%></ul>
-
 <table border="3" cellpadding="5" style="width:20em">
   <caption><font size="+2"><%=@workout.name%> </font></caption>
   <tr>
@@ -17,6 +14,9 @@
   <tr>
   <%end%>
 </table><br></br>
+
+<font size="+2">Notes:</font>
+<ul><%=@workout.notes%></ul><br></br>
 
 <strong>========================================== </strong><br></br>
 

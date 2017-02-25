@@ -1,18 +1,22 @@
 <h1>Workout Date: <%=@workout.date%></h1>
 
-<h3>Notes: <%=@workout.notes%></h3>
-
 <table border="3" cellpadding="5" style="width:20em">
+  <caption><font size="+2"><%=@workout.name%> </font></caption>
   <tr>
     <th>Exercises Completed</th>
+    <th>Bodypart</th>
   </tr>
 <% @workout.workout_exercises.each do |exercise| %>
   <tr>
-    <td align="center"><strong><%= Exercise.find(exercise.exercise_id).name%></strong></td>
+    <td align="center"><%= Exercise.find(exercise.exercise_id).name%></td>
+    <td align="center"><%= Exercise.find(exercise.exercise_id).bodypart%></td>
   </tr>
   <tr>
   <%end%>
 </table><br></br>
 
+<font size="+2">Notes:</font>
+<ul><%=@workout.notes%></ul>
+__________________________________________________________<br></br>
 
 <a href="/workouts/<%=@workout.id%>/edit">Click here to Edit this workout.</a>
