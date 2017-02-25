@@ -44,7 +44,7 @@ GEM
       slop (~> 3.4)
     public_suffix (2.0.5)
     rack (1.6.5)
-    rack-flash (0.1.2)
+    rack-flash3 (1.0.5)
       rack
     rack-protection (1.5.3)
       rack
@@ -108,7 +108,7 @@ DEPENDENCIES
   bcrypt
   capybara
   pry
-  rack-flash
+  rack-flash3
   rake
   require_all
   rspec
