@@ -18,7 +18,7 @@ class WorkoutController < ApplicationController
       @workout = Workout.new(params[:workout])
       current_user.workouts << @workout 
       current_user.save
-      flash[:message] = "Successfully created workout!"
+      flash[:message] = "Successfully saved new workout!"
       erb :'workouts/show'
     else 
       redirect '/workouts/new'
@@ -55,7 +55,6 @@ class WorkoutController < ApplicationController
       last_notes = @workout.notes
       @workout.update(params[:workout])
       @workout.update(date: last_date) if params[:workout][:date].empty? || !params[:workout][:date].is_a?(Date)
-      binding.pry
       @workout.update(name: last_name) if params[:workout][:name].empty?
       @workout.update(notes: last_notes) if params[:workout][:notes].empty?
       redirect "/workouts/#{@workout.id}"
@@ -68,6 +67,7 @@ class WorkoutController < ApplicationController
     @workout = Workout.find(params[:id])
     if logged_in? && @workout.user == current_user
       @workout.delete 
+      flash[:message] = "Successfully deleted workout!"
       redirect to '/home'
     else
       redirect to '/users/login'

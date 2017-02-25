@@ -1,0 +1,17 @@
+<h1>Welcome, <%=current_user.username%> - Here are all the exercises in the database!</h1>
+
+<h2>Exercise Repository----------------------------------</h2>
+
+<div id="first"><table border="3" cellpadding="5" style="width:20em">
+  <tr>
+    <th>Exercise Name</th>
+    <th>Bodypart</th>
+  </tr>
+<% Exercise.all.each do |exercise| %>
+  <tr>
+    <td align="center"><%= Exercise.find(exercise.exercise_id).name%></td>
+    <td align="center"><%= Exercise.find(exercise.exercise_id).bodypart%></td>
+  </tr>
+  <tr>
+  <%end%>
+</table><br></br>
