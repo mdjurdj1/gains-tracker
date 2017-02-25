@@ -1,7 +1,8 @@
+<% if logged_in? && @workout.user == current_user %>
 <h1>Workout Date: <%=@workout.date%></h1>
 
-<table border="3" cellpadding="5" style="width:20em">
-  <caption><font size="+2"><%=@workout.name%> </font></caption>
+<div id="first"><table border="3" cellpadding="5" style="width:20em">
+  <caption><font size="+2"><%=@workout.name%></font></caption>
   <tr>
     <th>Exercises Completed</th>
     <th>Bodypart</th>
@@ -16,7 +17,11 @@
 </table><br></br>
 
 <font size="+2">Notes:</font>
-<ul><%=@workout.notes%></ul>
-__________________________________________________________<br></br>
+<ul><%=@workout.notes%></ul><br></br><br></br><br></br>
 
-<a href="/workouts/<%=@workout.id%>/edit">Click here to Edit this workout.</a>
+<a href="/workouts/<%=@workout.id%>/edit"><input id="edit_button" type="submit" name="Edit" value="Edit"></input></a>
+</div>
+
+<%else%>
+<h1>Sorry, you must be logged in to view this workout!</h1>
+<%end%>

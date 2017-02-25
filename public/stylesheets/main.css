@@ -7,6 +7,7 @@ div#first {
     margin: 10px;
     margin-right: 25px;
     float:left;
+    position:relative
 }
 
 div#second {
@@ -17,9 +18,17 @@ div#second {
     margin: 10px;
     margin-right: 25px;
     float:left;
+    position:relative
 }
 
 div#arrow {
   line-height: 48em;
   float:left;
+  position:relative
+}
+
+input#edit_button {
+  position: absolute;
+    bottom: 2em;
+    left: 2em;
 }

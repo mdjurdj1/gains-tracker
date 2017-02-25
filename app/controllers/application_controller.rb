@@ -31,6 +31,10 @@ class ApplicationController < Sinatra::Base
     erb :'/users/signup' 
   end 
 
+  get '/logout' do 
+    session.clear 
+  end 
+
 
 
 

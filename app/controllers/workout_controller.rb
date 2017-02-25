@@ -2,10 +2,16 @@ require './config/environment'
 
 class WorkoutController < ApplicationController
 
+  get '/workouts' do 
+    redirect '/home'
+  end 
+  
   get '/workouts/:id' do
     if logged_in?
       @workout = Workout.find(params[:id])
-      erb :'/workouts/show'
+      if @workout && @workout.user == current_user
+        erb :'/workouts/show'
+      end
     else 
       redirect '/users/login'
     end 
@@ -24,15 +30,15 @@ class WorkoutController < ApplicationController
     if logged_in?
       @workout = Workout.find(params[:id])
       last_date = @workout.date
-      last_notes = @workout.notes
       last_name = @workout.name
+      last_notes = @workout.notes
       @workout.update(params[:workout])
       @workout.update(date: last_date) if params[:workout][:date].empty?
-      @workout.update(date: last_name) if params[:workout][:date].empty?
+      @workout.update(name: last_name) if params[:workout][:name].empty?
       @workout.update(notes: last_notes) if params[:workout][:notes].empty?
       redirect "/workouts/#{@workout.id}"
     else 
-      redirect '/login'
+      redirect '/users/login'
     end 
   end 
     
