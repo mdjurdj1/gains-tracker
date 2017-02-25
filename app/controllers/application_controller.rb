@@ -6,6 +6,7 @@ class ApplicationController < Sinatra::Base
     set :session_secret, "super_sekrit"
     set :views, Proc.new { File.join(root, "../views/") }
     enable :sessions
+    use Rack::Flash
   end 
 
   get '/' do

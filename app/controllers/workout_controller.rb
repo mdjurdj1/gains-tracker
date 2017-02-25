@@ -15,8 +15,11 @@ class WorkoutController < ApplicationController
 
   post '/workouts' do 
     if !params[:workout][:name].empty? && !params[:workout][:date].empty? && !params[:workout][:notes].empty?
-      wk = Workout.new(params[:workout])
-      wk.save 
+      @workout = Workout.new(params[:workout])
+      current_user.workouts << @workout 
+      current_user.save
+      flash[:message] = "Successfully created workout!"
+      erb :'workouts/show'
     else 
       redirect '/workouts/new'
     end 
@@ -47,7 +50,9 @@ class WorkoutController < ApplicationController
   patch '/workouts/:id' do 
     if logged_in?
       @workout = Workout.find(params[:id])
-      last_date = @workout.date, last_name = @workout.name, last_notes = @workout.notes
+      last_date = @workout.date
+      last_name = @workout.name
+      last_notes = @workout.notes
       @workout.update(params[:workout])
       @workout.update(date: last_date) if params[:workout][:date].empty?
       @workout.update(name: last_name) if params[:workout][:name].empty?
@@ -62,7 +67,7 @@ class WorkoutController < ApplicationController
     @workout = Workout.find(params[:id])
     if logged_in? && @workout.user == current_user
       @workout.delete 
-      redirect to '/users/home'
+      redirect to '/home'
     else
       redirect to '/users/login'
     end 
