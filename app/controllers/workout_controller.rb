@@ -1,3 +1,5 @@
+require './config/environment'
+
 class WorkoutController < ApplicationController
 
   get '/workouts/:id' do
@@ -20,8 +22,11 @@ class WorkoutController < ApplicationController
 
   patch '/workouts/:id' do 
     @workout = Workout.find(params[:id])
-    @workout.update(date: params[:date]) if !params[:date].empty?
-    @workout.update(notes: params[:notes]) if !params[:notes].empty?
+    last_date = @workout.date
+    last_notes = @workout.notes
+    @workout.update(params[:workout])
+    @workout.update(date: last_date) if params[:workout][:date].empty?
+    @workout.update(notes: last_notes) if params[:workout][:notes].empty?
     redirect "/workouts/#{@workout.id}"
   end 
     

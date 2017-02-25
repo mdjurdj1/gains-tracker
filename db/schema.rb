@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 20170224180923) do
 
   create_table "exercises", force: :cascade do |t|
     t.string "name"
+    t.string "bodypart"
   end
 
   create_table "users", force: :cascade do |t|

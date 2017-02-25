@@ -4,7 +4,7 @@ class WorkoutExercises < ActiveRecord::Migration[5.0]
       t.integer :workout_id
       t.integer :exercise_id
       t.integer :reps
-      t.integer :sets 
+      t.integer :sets
     end
   end
 end
