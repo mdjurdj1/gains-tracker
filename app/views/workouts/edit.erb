@@ -19,6 +19,7 @@
 <ul><%=@workout.notes%></ul>
 </div>
 
+<% if logged_in? %>
 <div id="arrow"><img src="/images/arrow1600.png" alt="Edit Workout To..." style="width:154px;height:108px;"></div>
 
 <div id="second"><form method="POST" action="/workouts/<%=@workout.id%>">
@@ -32,3 +33,4 @@
   <%end%><br></br>
 <input type="submit" name="Edit Workout" value="Edit Workout">
 </form></div>
+<%end%>
