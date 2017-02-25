@@ -1,0 +1,13 @@
+<h1>Welcome, <%=@user.username%> - Let's add a new workout!</h1>
+
+<div id="second"><form method="POST" action="/workouts">
+<font size="+2">Workout Name: </font> <input type="text" name="workout[name]" placeholder="Chest/Tris..."><br></br>
+<font size="+2">Workout Date: </font> <input type="text" name="workout[date]" placeholder="YYYY-MM-DD"><br></br>
+<font size="+2">Notes:</font><ul><textarea name="workout[notes]" rows="5" cols="40" placeholder="Edit Notes..."></textarea></ul>
+<font size="+2">Add/Remove Exercises:</font><br></br>
+<%Exercise.all.each do |exercise|%>
+  <input type="checkbox" name="workout[exercise_ids][]" value="<%=exercise.id%>"><%=exercise.name%><br></input>
+  <%end%><br></br>
+<input id="add_workout" type="submit" name="Add Workout" value="Add Workout"></input></a>
+</form>
+</div>

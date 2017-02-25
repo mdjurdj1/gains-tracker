@@ -32,3 +32,15 @@ input#edit_button {
     bottom: 2em;
     left: 2em;
 }
+
+input#delete_button {
+  position: absolute;
+    bottom: 2em;
+    left: 22em;
+}
+
+input#add_workout {
+  position: absolute;
+    bottom: 2em;
+    left: 2em;
+}

@@ -20,8 +20,12 @@
 <ul><%=@workout.notes%></ul><br></br><br></br><br></br>
 
 <a href="/workouts/<%=@workout.id%>/edit"><input id="edit_button" type="submit" name="Edit" value="Edit"></input></a>
-</div>
 
+<form method="POST" action="/workouts/<%=@workout.id%>/delete">
+<input id="hidden" type="hidden" name="_method" value="delete">
+<input id="delete_button" type="submit" name="Delete" value="Delete"></input>
+</form>
+</div>
 <%else%>
 <h1>Sorry, you must be logged in to view this workout!</h1>
 <%end%>

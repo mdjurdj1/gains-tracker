@@ -31,6 +31,7 @@
 <%Exercise.all.each do |exercise|%>
   <input type="checkbox" name="workout[exercise_ids][]" value="<%=exercise.id%>" <%='checked' if @workout.exercises.include?(exercise) %>><%=exercise.name%><br></input>
   <%end%><br></br>
-<input type="submit" name="Edit Workout" value="Edit Workout">
-</form></div>
+<a href="/workouts/<%=@workout.id%>/edit"><input id="edit_button" type="submit" name="Edit" value="Edit"></input></a>
+</form>
+</div>
 <%end%>
