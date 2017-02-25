@@ -9,6 +9,9 @@ class UserController < ApplicationController
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
       redirect to '/home'
+    elsif @user && !@user.authenticate(params[:password])
+      flash[:message] = "Invalid Password - Please try again."
+      erb :'/users/login'
     else
       redirect to '/'
     end

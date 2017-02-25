@@ -54,7 +54,8 @@ class WorkoutController < ApplicationController
       last_name = @workout.name
       last_notes = @workout.notes
       @workout.update(params[:workout])
-      @workout.update(date: last_date) if params[:workout][:date].empty?
+      @workout.update(date: last_date) if params[:workout][:date].empty? || !params[:workout][:date].is_a?(Date)
+      binding.pry
       @workout.update(name: last_name) if params[:workout][:name].empty?
       @workout.update(notes: last_notes) if params[:workout][:notes].empty?
       redirect "/workouts/#{@workout.id}"

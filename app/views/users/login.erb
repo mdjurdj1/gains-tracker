@@ -1,7 +1,13 @@
-<h1>Log In Here</h1>
+<h1> &nbsp&nbsp   ------------- Log-In -------------</h1>
 
+<div id="login">
 <form method="POST" action="/login">
 <h4>Username: <input type="text" name="username" placeholder="Username"></h4>
 <h4>Password: <input type="password" name="password" placeholder="Password"></h4>
 <input type="submit" name="Log In" value="Log In">
 </form>
+<div><br></br><br></br>
+
+  <% if flash.has?(:message) %>
+    <font size="+2"><%= flash[:message] %></font>
+  <% end %>
