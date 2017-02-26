@@ -4,6 +4,7 @@ body {
   /*background-color: #3B96DC;*/
 }
 
+
 div.wrapper {
   background: #F0F0F0;
   -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
@@ -14,8 +15,8 @@ div.wrapper {
   border-width: 5px;
   margin: 16px auto;
   max-width: 1160px;
-  padding: 2.25%; /* 18px / 800px */
-  padding-bottom: 100px;
+  padding: 2.25%;
+  padding-bottom: 50px;
   width: 85%;
   overflow:hidden
 }
@@ -48,6 +49,7 @@ div.mid_box#workout_journal {
       padding-right: 40px;
       margin-left: auto;
       margin-right: auto;
+      margin-bottom: 40px;
       position:relative;
       overflow:hidden
   }
@@ -153,6 +155,27 @@ input#add_exercise {
     left: 15em;
 }
 
+div.feet {
+  position: absolute;
+  bottom: 2em;
+  left: 2em;
+}
+
 .center {
     text-align: center;
   }
+
+/*------------------------------------FOOTER STUFF*/
+.copyright {
+  clear: both;
+}
+
+footer.copyright {
+  border-top: 2px solid #DFDFDF;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.wrapper footer.navigation {
+  float: right;
+}
