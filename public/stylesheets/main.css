@@ -3,10 +3,26 @@ body {
 }
 
 div.wrapper {
-    width: 85%;
+  background: #fff;
+  -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
+  box-shadow: 0 0 10px rgba(0,0,0,.3);
+  margin: 16px auto;
+  max-width: 1160px;
+  padding: 2.25%; /* 18px / 800px */
+  width: 85%;
+  overflow:hidden
+}
+
+div#mid_box {
+    width: 50%;
+    height: 40%;
+    border: 15px solid; color:#034876;
     padding: 25px;
-    margin: 0 auto;
-    background: white;
+    padding-right: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    position:relative
 }
 
 div#first {
@@ -39,7 +55,8 @@ div.small_box {
     padding: 25px;
     padding-right: 40px;
     margin: 10px;
-    margin-right: 25px;
+    margin-right: auto;
+    margin-left: auto;
     position:relative
 }
 
@@ -49,16 +66,22 @@ div#arrow {
   position:relative
 }
 
+input#log_in {
+  position: absolute;
+    bottom: 3em;
+    left: 13em;
+}
+
 input#edit_button {
   position: absolute;
     bottom: 2em;
-    left: 2em;
+    left: 4em;
 }
 
 input#delete_button {
   position: absolute;
     bottom: 2em;
-    left: 22em;
+    left: 36em;
 }
 
 input#add_workout {
@@ -66,3 +89,7 @@ input#add_workout {
     bottom: 2em;
     left: 2em;
 }
+
+.center {
+    text-align: center;
+  }

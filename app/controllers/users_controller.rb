@@ -7,13 +7,15 @@ class UserController < ApplicationController
   post '/login' do
     @user = User.find_by(username: params[:username])
     if @user && @user.authenticate(params[:password])
+      flash[:message] = ""
       session[:user_id] = @user.id
       redirect to '/home'
     elsif @user && !@user.authenticate(params[:password])
       flash[:message] = "Invalid Password - Please try again."
       erb :'/users/login'
     else
-      redirect to '/'
+      flash[:message] = "No such user was found - Please try again."
+      erb :'/users/login'
     end
   end
 

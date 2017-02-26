@@ -1,13 +1,13 @@
-<div class="container">
-  
 <% if flash.has?(:message) %>
   <font size="+2"><%= flash[:message] %></font>
 <% end %>
 
 <% if logged_in? && @workout.user == current_user %>
+<div class="container" align="center">
 <h1>Workout Date: <%=@workout.date%></h1>
+<p style="border-bottom:1px solid #212121;padding-bottom:12px;"></p>
 
-<div id="first"><table border="3" cellpadding="5" style="width:20em">
+<div id="mid_box"><table border="3" cellpadding="5" style="width:20em" align="center">
   <caption><font size="+2"><%=@workout.name%></font></caption>
   <tr>
     <th>Exercises Completed</th>
@@ -23,16 +23,17 @@
 </table><br></br>
 
 <font size="+2">Notes:</font>
-<ul><%=@workout.notes%></ul><br></br><br></br><br></br>
+<ul><%=@workout.notes%></ul>
+<p style="border-bottom:1px solid #212121;padding-bottom:12px;"></p><br></br>
 
-<a href="/workouts/<%=@workout.id%>/edit"><input id="edit_button" type="submit" name="Edit" value="Edit"></input></a>
+<a href="/workouts/<%=@workout.id%>/edit"><input id="edit_button" type="submit" name="Edit Workout" value="Edit Workout"></input></a>
 
 <form method="POST" action="/workouts/<%=@workout.id%>/delete">
 <input id="hidden" type="hidden" name="_method" value="delete">
-<input id="delete_button" type="submit" name="Delete" value="Delete"></input>
+<input id="delete_button" type="submit" name="Delete Workout" value="Delete Workout"></input>
 </form>
 </div>
 <%else%>
 <h1>Sorry, you must be logged in to view this workout!</h1>
-<%end%>
 </div>
+<%end%>

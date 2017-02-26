@@ -1,34 +1,32 @@
 require './config/environment'
 class ApplicationController < Sinatra::Base
-  
-  configure do 
+
+  configure do
     register Sinatra::ActiveRecordExtension
     set :session_secret, "super_sekrit"
     set :views, Proc.new { File.join(root, "../views/") }
     enable :sessions
     use Rack::Flash
-  end 
+  end
 
   get '/' do
     if logged_in?
         redirect '/home'
-      else 
+      else
         erb :'index'
-    end 
+    end
   end
 
 
-  helpers do 
+  helpers do
     def logged_in?
       !!session[:user_id]
-    end 
+    end
 
-    def current_user 
+    def current_user
       User.find(session[:user_id])
-    end 
-  end 
+    end
+  end
 
-  
+
 end
-
-  
