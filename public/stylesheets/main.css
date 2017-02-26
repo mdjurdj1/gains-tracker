@@ -7,6 +7,9 @@ div.wrapper {
   -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
   -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
   box-shadow: 0 0 10px rgba(0,0,0,.3);
+  border-style: groove;
+  border-color: #034876;
+  border-width: 5px;
   margin: 16px auto;
   max-width: 1160px;
   padding: 2.25%; /* 18px / 800px */
@@ -15,7 +18,7 @@ div.wrapper {
 }
 
 div#mid_box {
-    background: #F0F0F0;
+    background: #FFFFFF;
     -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
     -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
     box-shadow: 0 0 10px rgba(0,0,0,.3);
@@ -31,7 +34,7 @@ div#mid_box {
 }
 
 div.mid_box#workout_journal {
-      background: #F0F0F0;
+      background: #FFFFFF;
       -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
       -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
       box-shadow: 0 0 10px rgba(0,0,0,.3);
@@ -48,12 +51,12 @@ div.mid_box#workout_journal {
 
 
 div#first {
-    background: #F0F0F0;
+    background: #FFFFFF;
     -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
     -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
     box-shadow: 0 0 10px rgba(0,0,0,.3);
-    width: 330px;
-    height: 700px;
+    width: 34%;
+    height: 600px;
     border: 15px solid; color:#034876;
     padding: 25px;
     padding-right: 40px;
@@ -64,12 +67,12 @@ div#first {
 }
 
 div#second {
-    background: #F0F0F0;
+    background: #FFFFFF;
     -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
     -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
     box-shadow: 0 0 10px rgba(0,0,0,.3);
-    width: 360px;
-    height: 700px;
+    width: 34%;
+    height: 600px;
     border: 15px solid; color:#034876;
     padding: 25px;
     margin: 10px;
@@ -84,7 +87,7 @@ div.small_box {
     -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
     box-shadow: 0 0 10px rgba(0,0,0,.3);
     background: #FFFFFF;
-    width: 370px;
+    width: 450px;
     height: 160px;
     border: 15px solid; color:#034876;
     padding: 25px;
@@ -114,13 +117,19 @@ div#arrow {
 input#log_in {
   position: absolute;
     bottom: 3em;
-    left: 13em;
+    left: 16em;
 }
 
 input#edit_button {
   position: absolute;
     bottom: 2em;
     left: 4em;
+}
+
+input#edit_button2 {
+  position: absolute;
+    bottom: -4em;
+    left: 2em;
 }
 
 input#delete_button {
