@@ -1,16 +1,17 @@
 <div class="container">
 
-<h1>Welcome <%= @user.username %>!</h1>
+<h1 class="center">Welcome <%= @user.username %>!</h1>
 <p style="border-bottom:1px solid #212121;padding-bottom:12px;"></p>
 <% if flash.has?(:message) %>
   <font size="+2"><%= flash[:message] %></font>
 <% end %><br>
 
+<div class="mid_box" id="workout_journal">
 <a href="/workouts/new">Click Here to Add a New Workout!</a><br></br>
 
 <h2>Workout Journal----------------------------------</h2>
 <% @user.workouts.each do |workout| %>
  <h3><a href="/workouts/<%=workout.id%>"><ul>Workout Date: <%=workout.date%></ul></a></h3>
  <%end%>
-
+</div>
 </div>

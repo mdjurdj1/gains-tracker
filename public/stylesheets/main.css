@@ -3,7 +3,7 @@ body {
 }
 
 div.wrapper {
-  background: #fff;
+  background: #F0F0F0;
   -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
   -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
   box-shadow: 0 0 10px rgba(0,0,0,.3);
@@ -15,6 +15,10 @@ div.wrapper {
 }
 
 div#mid_box {
+    background: #F0F0F0;
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
     width: 50%;
     height: 40%;
     border: 15px solid; color:#034876;
@@ -22,10 +26,32 @@ div#mid_box {
     padding-right: 40px;
     margin-left: auto;
     margin-right: auto;
-    position:relative
+    position:relative;
+    overflow:hidden
 }
 
+div.mid_box#workout_journal {
+      background: #F0F0F0;
+      -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
+      -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
+      box-shadow: 0 0 10px rgba(0,0,0,.3);
+      width: 50%;
+      height: 40%;
+      border: 15px solid; color:#034876;
+      padding: 25px;
+      padding-right: 40px;
+      margin-left: auto;
+      margin-right: auto;
+      position:relative;
+      overflow:hidden
+  }
+
+
 div#first {
+    background: #F0F0F0;
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
     width: 330px;
     height: 700px;
     border: 15px solid; color:#034876;
@@ -38,6 +64,10 @@ div#first {
 }
 
 div#second {
+    background: #F0F0F0;
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
     width: 360px;
     height: 700px;
     border: 15px solid; color:#034876;
@@ -49,7 +79,12 @@ div#second {
 }
 
 div.small_box {
-    width: 330px;
+    background: #F0F0F0;
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    background: #FFFFFF;
+    width: 370px;
     height: 160px;
     border: 15px solid; color:#034876;
     padding: 25px;
@@ -58,6 +93,16 @@ div.small_box {
     margin-right: auto;
     margin-left: auto;
     position:relative
+}
+
+
+div#add_or_remove_exercises {
+  position:relative;
+}
+
+div.exercise_container {
+  float:left;
+  padding: 10px;
 }
 
 div#arrow {
