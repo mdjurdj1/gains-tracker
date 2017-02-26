@@ -36,6 +36,14 @@ Bcrypt - A sophisticated and secure hash algorithm designed by The OpenBSD proje
 
 Gains Tracker itself is also an open source project with a public repository on GitHub.
 
+##Todo List
+
+* Add Rep/Set save functionality
+* Attach directions/descriptions for each exercise
+* Change Add/Remove exercise checkbox list to a dropdown selector with checkboxes
+* Add those neat little graphics to username/password/email input fields (twitter bootstrap?)
+* Make layout mobile friendly
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at the [Gains-Tracker repository]https://github.com/'Michael Djurdjevic'/gains-tracker. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
