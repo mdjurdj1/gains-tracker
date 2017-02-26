@@ -125,6 +125,26 @@ input#log_in {
     left: 16em;
 }
 
+input#login_user {
+    background: #034876;
+    font-weight: bold;
+    color: white;
+    padding:10px;
+    border:2px solid #ccc;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+input#signup_user {
+    background: #034876;
+    font-weight: bold;
+    color: white;
+    padding:10px;
+    border:2px solid #ccc;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
 input#edit_button {
   position: absolute;
     bottom: 2em;
