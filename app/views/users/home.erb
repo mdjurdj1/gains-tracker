@@ -11,7 +11,7 @@
 
     <h2>Workout Journal----------------------------------</h2>
     <% @user.workouts.order('date desc').each do |workout| %>
-     <h3><a href="/workouts/<%=workout.id%>"><ul><%=workout.date%> - - <%=workout.name%></ul></a></h3>
+     <h3><ul><a href="/workouts/<%=workout.id%>"><%=workout.date%> - - <%=workout.name%></a></ul></h3>
      <%end%>
   </div>
 
