@@ -151,6 +151,32 @@ input#login_user {
     border-radius: 5px;
 }
 
+input#sign-up {
+  background: #034876;
+  font-weight: bold;
+  color: white;
+  padding:10px;
+  border:2px solid #ccc;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  position: absolute;
+  margin-bottom: 10px;
+  bottom: 0em;
+  left: 16em;
+}
+
+input#login_user:focus {
+  border-color:#34E2E2;
+}
+
+input#signup_user:focus {
+  border-color:#34E2E2;
+}
+
+input#sign-up:focus {
+  border-color:#34E2E2;
+}
+
 input#signup_user {
     background: #034876;
     font-weight: bold;
@@ -207,7 +233,7 @@ div.feet {
 }
 
 footer.copyright {
-  border-top: 1px solid #AACAEB;
+  border-top: 1px solid #034876;
   margin-top: 20px;
   padding-top: 20px;
 }
