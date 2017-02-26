@@ -1,3 +1,5 @@
+<div class="container">
+
 <h1>Welcome <%= @user.username %>!</h1>
 <% if flash.has?(:message) %>
   <font size="+2"><%= flash[:message] %></font>
@@ -9,3 +11,5 @@
 <% @user.workouts.each do |workout| %>
  <h3><a href="/workouts/<%=workout.id%>"><ul>Workout Date: <%=workout.date%></ul></a></h3>
  <%end%>
+
+</div>

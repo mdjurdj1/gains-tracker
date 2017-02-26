@@ -1,11 +1,12 @@
 body {
-  background-color: #F2F2F2;
+  background-color: #3B96DC;
 }
 
-div#wrapper {
+div.wrapper {
     width: 85%;
+    padding: 25px;
     margin: 0 auto;
-    background-color: blue;
+    background: white;
 }
 
 div#first {
