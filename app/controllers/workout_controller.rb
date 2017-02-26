@@ -21,6 +21,7 @@ class WorkoutController < ApplicationController
       flash[:message] = "Successfully saved new workout!"
       erb :'workouts/show'
     else 
+      flash[:message] = "Unable to save workout. Did you make sure to give it a name, date, and notes?"
       redirect '/workouts/new'
     end 
   end 

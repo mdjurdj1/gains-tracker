@@ -2,16 +2,18 @@
 
 <h1 class="center">Save a New Exercise:</h1>
 <p style="border-bottom:1px solid #212121;padding-bottom:12px;"></p>
+
 <% if flash.has?(:message) %>
   <font size="+2"><%= flash[:message] %><br></br></font>
 <% end %>
 
 
-<div class="small_box"><form method="POST" action="/exercises">
-<p class="center"><font size="+2">Exercise Name: </font> <input type="text" name="exercise[name]" maxlength="15" placeholder="Standing Lunges"></p>
-<p class="center"><font size="+2">Exercise Bodypart: </font> <input type="text" name="exercise[bodypart]" maxlength="15" placeholder="Legs"></p>
-<input id="add_exercise" type="submit" name="Save Exercise" value="Save Exercise"></input>
-</form>
+<div class="small_box">
+  <form method="POST" action="/exercises">
+    <p class="center"><font size="+2">Exercise Name: </font> <input type="text" name="exercise[name]" maxlength="15" placeholder="Standing Lunges"></p>
+    <p class="center"><font size="+2">Exercise Bodypart: </font> <input type="text" name="exercise[bodypart]" maxlength="15" placeholder="Legs"></p>
+    <input id="add_exercise" type="submit" name="Save Exercise" value="Save Exercise"></input>
+  </form>
 </div>
 
 </div>
