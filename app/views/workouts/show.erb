@@ -1,5 +1,5 @@
 <% if flash.has?(:message) %>
-  <font size="+2"><%= flash[:message] %></font>
+  <font size="+2" class="center"><%= flash[:message] %></font>
 <% end %>
 
 <% if logged_in? && @workout.user == current_user %>

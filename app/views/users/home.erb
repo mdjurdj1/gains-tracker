@@ -3,8 +3,8 @@
 <h1 class="center">Welcome <%= @user.username %>!</h1>
 <p style="border-bottom:1px solid #212121;padding-bottom:12px;"></p>
 <% if flash.has?(:message) %>
-  <font size="+2"><%= flash[:message] %></font>
-<% end %><br>
+  <font size="+2" class="center"><%= flash[:message] %></font>
+<% end %><br></br>
 
 <div class="mid_box" id="workout_journal">
 <a href="/workouts/new">Click Here to Add a New Workout!</a><br></br>

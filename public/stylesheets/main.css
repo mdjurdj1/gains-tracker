@@ -1,5 +1,7 @@
 body {
-  background-color: #3B96DC;
+  background-image: url("/images/dumbells.jpg");
+  background-repeat:no-repeat;
+  /*background-color: #3B96DC;*/
 }
 
 div.wrapper {
@@ -13,6 +15,7 @@ div.wrapper {
   margin: 16px auto;
   max-width: 1160px;
   padding: 2.25%; /* 18px / 800px */
+  padding-bottom: 100px;
   width: 85%;
   overflow:hidden
 }
