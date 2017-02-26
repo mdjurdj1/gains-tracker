@@ -118,6 +118,10 @@ div.exercise_container {
   padding: 10px;
 }
 
+div.container#edit_page_container {
+  margin-left: 400em;
+}
+
 div#arrow {
   line-height: 48em;
   float:left;

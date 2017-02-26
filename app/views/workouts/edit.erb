@@ -3,46 +3,46 @@
 <h2 class="center">Edit Workout: <%=@workout.date%></h2>
 <p style="border-bottom:1px solid #212121;padding-bottom:12px;"></p>
 
-<div id="first"><table border="3" cellpadding="5" style="width:20em" align="center">
-      <caption><font size="+2"><%=@workout.name%></font></caption>
-      <tr>
-        <th>Exercises Completed</th>
-        <th>Bodypart</th>
-      </tr>
-    <% @workout.workout_exercises.each do |exercise| %>
-      <tr>
-        <td align="center"><%= Exercise.find(exercise.exercise_id).name%></td>
-        <td align="center"><%= Exercise.find(exercise.exercise_id).bodypart%></td>
-      </tr>
-      <tr>
-      <%end%>
-    </table><br></br>
+    <div id="first"><table border="3" cellpadding="5" style="width:20em" align="center">
+          <caption><font size="+2"><%=@workout.name%></font></caption>
+          <tr>
+            <th>Exercises Completed</th>
+            <th>Bodypart</th>
+          </tr>
+        <% @workout.workout_exercises.each do |exercise| %>
+          <tr>
+            <td align="center"><%= Exercise.find(exercise.exercise_id).name%></td>
+            <td align="center"><%= Exercise.find(exercise.exercise_id).bodypart%></td>
+          </tr>
+          <tr>
+          <%end%>
+        </table><br></br>
 
-    <font size="+2">Notes:</font>
-    <ul><%=@workout.notes%></ul>
-</div>
-
-<div id="arrow"><img src="/images/arrow1600.png" alt="Edit Workout To..." style="width:60px;height:40px;"></div>
-
-<div id="second"><form method="POST" action="/workouts/<%=@workout.id%>">
-
-  <input id="hidden" type="hidden" name="_method" value="patch">
-  <font size="+2">Workout Name: </font> <input type="text" name="workout[name]" placeholder="Chest/Tris..."><br></br>
-  <font size="+2">Workout Date: </font> <input type="text" name="workout[date]" placeholder="YYYY-MM-DD"><br></br>
-  <font size="+2">Notes:</font><ul><textarea name="workout[notes]" rows="5" cols="40" maxlength="600" placeholder="Edit Notes..."></textarea></ul>
-  <font size="+2">Add/Remove Exercises:</font><br></br>
-  <div id="add_or_remove_exercises">
-    <div class="exercise_container"><%Exercise.all[0,10].each do |exercise|%>
-      <input type="checkbox" name="workout[exercise_ids][]" value="<%=exercise.id%>"<%='checked' if @workout.exercises.include?(exercise)%>><small><%=exercise.name%></small><br></input>
-      <%end%><br>
+        <font size="+2">Notes:</font>
+        <ul><%=@workout.notes%></ul>
     </div>
-    <div class="exercise_container"><%Exercise.all[10..-1].each do |exercise|%>
-      <input type="checkbox" name="workout[exercise_ids][]" value="<%=exercise.id%>"<%='checked' if @workout.exercises.include?(exercise)%>><small><%=exercise.name%></small><br></input>
-      <%end%><br>
-    </div><br></br><br></br><br></br><br></br><br></br><br></br><br><br>
-  <a href="/exercises/new">Or, click here to save a new exercise to the database first.</a>
-  </form>
-<a href="/workouts/<%=@workout.id%>/edit"><input id="edit_button2" type="submit" name="Edit" value="Edit"></input></a>
-</div>
 
-</div>
+    <div id="arrow"><img src="/images/arrow1600.png" alt="Edit Workout To..." style="width:60px;height:40px;"></div>
+
+    <div id="second"><form method="POST" action="/workouts/<%=@workout.id%>">
+
+      <input id="hidden" type="hidden" name="_method" value="patch">
+      <font size="+2">Workout Name: </font> <input type="text" name="workout[name]" placeholder="Chest/Tris..."><br></br>
+      <font size="+2">Workout Date: </font> <input type="text" name="workout[date]" placeholder="YYYY-MM-DD"><br></br>
+      <font size="+2">Notes:</font><ul><textarea name="workout[notes]" rows="5" cols="40" maxlength="600" placeholder="Edit Notes..."></textarea></ul>
+      <font size="+2">Add/Remove Exercises:</font><br></br>
+      <div id="add_or_remove_exercises">
+        <div class="exercise_container"><%Exercise.all[0,10].each do |exercise|%>
+          <input type="checkbox" name="workout[exercise_ids][]" value="<%=exercise.id%>"<%='checked' if @workout.exercises.include?(exercise)%>><small><%=exercise.name%></small><br></input>
+          <%end%><br>
+        </div>
+        <div class="exercise_container"><%Exercise.all[10..-1].each do |exercise|%>
+          <input type="checkbox" name="workout[exercise_ids][]" value="<%=exercise.id%>"<%='checked' if @workout.exercises.include?(exercise)%>><small><%=exercise.name%></small><br></input>
+          <%end%><br>
+        </div><br></br><br></br><br></br><br></br><br></br><br></br><br><br>
+      <a href="/exercises/new">Or, click here to save a new exercise to the database first.</a>
+      </form>
+    <a href="/workouts/<%=@workout.id%>/edit"><input id="edit_button2" type="submit" name="Edit" value="Edit"></input></a>
+    </div>
+  </div>
+ </div>
