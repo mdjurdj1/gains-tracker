@@ -6,17 +6,23 @@ This Sinatra app will allow you to create, save, and edit your workouts in a per
 
 First, clone the repository, then execute:
 
-```$ bundle install```
+```
+$ bundle install
+```
 
 ## Usage
 
 Clean, then migrate the database:
 
-```rake db:reset  db:migrate```
+```
+$ rake db:reset  db:migrate
+```
 
 To start the server, run:
 
-```$ shotgun```
+```
+$ shotgun
+```
 
 Then, navigate to your provided shotgun server.
 
