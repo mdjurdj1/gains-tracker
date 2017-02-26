@@ -20,7 +20,7 @@ div.wrapper {
   overflow:hidden
 }
 
-div#mid_box {
+div.mid_box {
     background: #FFFFFF;
     -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
     -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
@@ -145,6 +145,12 @@ input#add_workout {
   position: absolute;
     bottom: 2em;
     left: 2em;
+}
+
+input#add_exercise {
+  position: absolute;
+    bottom: 3.5em;
+    left: 15em;
 }
 
 .center {

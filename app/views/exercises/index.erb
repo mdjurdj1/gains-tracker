@@ -1,22 +1,23 @@
 <div class="container">
 
-<h1 class="center">Exercise Repository</h1>
-<p style="border-bottom:1px solid #212121;padding-bottom:12px;"></p>
+  <h1 class="center">Exercise Repository</h1>
+  <p style="border-bottom:1px solid #212121;padding-bottom:12px;"></p>
 
-<p class="center"><strong>Click <a href="/exercises/new">Here</a> to save a new exercise.</p></strong><br></br>
-
-<table align="center" border="3" cellpadding="5" style="width:20em">
-  <tr>
-    <th>Exercise Name</th>
-    <th>Bodypart</th>
-  </tr>
-<% Exercise.all.each do |exercise| %>
-  <tr>
-    <td align="center"><%= exercise.name%></td>
-    <td align="center"><%= exercise.bodypart%></td>
-  </tr>
-  <tr>
-  <%end%>
-</table><br></br>
+  <p class="center"><strong>Click <a href="/exercises/new">Here</a> to save a new exercise.</p></strong>
+  <div class="mid_box">
+    <table align="center" border="3" cellpadding="5" style="width:20em">
+      <tr>
+        <th>Exercise Name</th>
+        <th>Bodypart</th>
+      </tr>
+    <% Exercise.all.each do |exercise| %>
+      <tr>
+        <td align="center"><%= exercise.name%></td>
+        <td align="center"><%= exercise.bodypart%></td>
+      </tr>
+      <tr>
+      <%end%>
+    </table><br>
+  </div>
 
 </div>
