@@ -9,7 +9,7 @@ This Sinatra-based Web app is a simple workout tracker with allows you to keep a
 
 ## Video Walkthrough
 
-[![Gains-Tracker!](http://imgur.com/uU0cRDB)](https://www.youtube.com/watch?v=_NUHQjUVIEM&feature=youtu.be "Gains-Tracker!")
+[![Imgur](http://i.imgur.com/uU0cRDB.png)](https://www.youtube.com/watch?v=_NUHQjUVIEM&feature=youtu.be "Gains-Tracker!")
 
 ## Installation
 
