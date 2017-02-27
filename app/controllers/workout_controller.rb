@@ -1,54 +1,54 @@
 class WorkoutController < ApplicationController
 
-  get '/workouts' do 
+  get '/workouts' do
     redirect '/home'
-  end 
+  end
 
-  get '/workouts/new' do 
+  get '/workouts/new' do
     if logged_in?
       @user = current_user
       erb :'workouts/new'
-    else 
+    else
       redirect '/users/login'
-    end 
-  end 
+    end
+  end
 
-  post '/workouts' do 
+  post '/workouts' do
     if !params[:workout][:name].empty? && !params[:workout][:date].empty? && !params[:workout][:notes].empty?
       @workout = Workout.new(params[:workout])
-      current_user.workouts << @workout 
+      current_user.workouts << @workout
       current_user.save
       flash[:message] = "Successfully saved new workout!"
       erb :'workouts/show'
-    else 
+    else
       flash[:message] = "Unable to save workout. Did you make sure to give it a name, date, and notes?"
       redirect '/workouts/new'
-    end 
-  end 
-  
+    end
+  end
+
   get '/workouts/:id' do
     if logged_in?
       @workout = Workout.find(params[:id])
       if @workout && @workout.user == current_user
         erb :'/workouts/show'
       elsif @workout && !(@workout.user == current_user)
-        redirect '/home' 
-      end 
-    else 
+        redirect '/home'
+      end
+    else
       redirect '/users/login'
-    end 
+    end
   end
 
-  get '/workouts/:id/edit' do 
+  get '/workouts/:id/edit' do
     if logged_in?
       @workout = Workout.find(params[:id])
       erb :'/workouts/edit'
-    else  
+    else
       redirect '/users/login'
-    end 
-  end 
+    end
+  end
 
-  patch '/workouts/:id' do 
+  patch '/workouts/:id' do
     if logged_in?
       @workout = Workout.find(params[:id])
       last_date = @workout.date
@@ -59,23 +59,23 @@ class WorkoutController < ApplicationController
       @workout.update(name: last_name) if params[:workout][:name].empty?
       @workout.update(notes: last_notes) if params[:workout][:notes].empty?
       redirect "/workouts/#{@workout.id}"
-    else 
+    else
       redirect '/users/login'
-    end 
-  end 
+    end
+  end
 
-  delete '/workouts/:id/delete' do 
+  delete '/workouts/:id/delete' do
     @workout = Workout.find(params[:id])
     if logged_in? && @workout.user == current_user
-      @workout.delete 
+      @workout.delete
       flash[:message] = "Successfully deleted workout!"
       redirect to '/home'
     else
       redirect to '/users/login'
-    end 
-  end 
-    
-    
+    end
+  end
 
-  
-end 
+
+
+
+end

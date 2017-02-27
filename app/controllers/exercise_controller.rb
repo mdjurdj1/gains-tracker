@@ -2,13 +2,13 @@ class ExerciseController < ApplicationController
 
   get '/exercises' do
     erb :'exercises/index'
-  end 
+  end
 
   get '/exercises/new' do
     erb :'exercises/new'
   end 
 
-  post '/exercises' do 
+  post '/exercises' do
     if logged_in? && !params[:exercise][:name].empty? && !params[:exercise][:bodypart].empty?
       if Exercise.find_by(name: params[:exercise][:name])
         flash[:message] = "An exercise with that name already exists!"
@@ -20,9 +20,9 @@ class ExerciseController < ApplicationController
     elsif params[:exercise][:name].empty? || params[:exercise][:bodypart].empty?
       flash[:message] = "Your exercise must have a name and bodypart!"
       redirect '/exercises/new'
-    else 
+    else
       redirect '/login'
-    end 
-  end 
+    end
+  end
 
-end  
+end

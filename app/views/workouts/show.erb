@@ -1,10 +1,9 @@
-<% if flash.has?(:message) %>
-  <font size="+2" class="center"><%= flash[:message] %></font>
-<% end %>
-
 <% if logged_in? && @workout.user == current_user %>
 <h1 class="center">Workout Date: <%=@workout.date%></h1>
 <p style="border-bottom:1px solid #212121;padding-bottom:12px;"></p>
+<% if flash.has?(:message) %>
+  <font size="+2" class="center"><%= flash[:message] %></font>
+<% end %>
 
   <div class="mid_box"><table border="3" cellpadding="5" style="width:70%" align="center">
         <caption><font size="+2"><%=@workout.name%></font></caption>
