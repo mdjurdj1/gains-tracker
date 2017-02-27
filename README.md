@@ -1,6 +1,15 @@
 # Welcome to Gains Tracker!
 
-This Sinatra app will allow you to create, save, and edit your workouts in a persisted journal. You can also add/save your own custom exercises!
+This Sinatra-based Web app is a simple workout tracker with allows you to keep a running journal of your workouts. Provided below is a video walkthrough detailing this functionality. Registered Users are able to:
+
+* Save workouts in a journal that only you can view
+* Update or delete previous workouts as you please
+* Add helpful notes to each workout
+* Create and save custom exercises
+
+## Video Walkthrough
+
+[![Gains-Tracker!](http://imgur.com/uU0cRDB)](https://www.youtube.com/watch?v=_NUHQjUVIEM&feature=youtu.be "Gains-Tracker!")
 
 ## Installation
 
@@ -30,9 +39,9 @@ Then, navigate to your provided shotgun server.
 
 Gains Tracker uses a number of open source projects to work properly:
 
-Sinatra - A DSL for quickly creating web applications in Ruby with minimal effort.
-Active Record - Connects classes to relational database tables.
-Bcrypt - A sophisticated and secure hash algorithm designed by The OpenBSD project.
+* Sinatra - A DSL for quickly creating web applications in Ruby with minimal effort.
+* Active Record - Connects classes to relational database tables.
+* Bcrypt - A sophisticated and secure hash algorithm designed by The OpenBSD project.
 
 Gains Tracker itself is also an open source project with a public repository on GitHub.
 
