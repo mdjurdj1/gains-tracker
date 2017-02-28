@@ -42,7 +42,7 @@ class UserController < ApplicationController
           session[:user_id] = @user.id
           redirect '/home'
         else
-          flash[:message] = "Invalid password(6 character minimum) or email given. Please try again!"
+          flash[:message] = "Invalid Signup Details - Password must be 6+ characters in length, Email must be in standard format."
           redirect '/signup'
         end
       end
